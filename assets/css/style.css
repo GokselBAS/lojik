@@ -614,7 +614,7 @@ section {
 }
 
 @media (max-width: 667px) {
-  .about .image img {
+  .about .image {
     background: url("../img/about3.jpg") center center no-repeat;
   }
 }
