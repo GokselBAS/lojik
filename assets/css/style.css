@@ -75,9 +75,9 @@ h6 {
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .image {
-    background-image: url('../img/about2.png');
+    background-image: url('../img/about2.png') !important;
     /* İstenilen stil ayarlamaları */
   }
 }
