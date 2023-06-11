@@ -613,11 +613,9 @@ section {
   min-height: 400px;
 }
 
-@media (max-width: 1024px) {
-  .about .image img {
-    background-image: url('../img/about.jpg') center center no-repeat;
-    background-size: cover;
-    min-height: 400px;
+@media (max-width: 991px) {
+  .about .image {
+    background: url("../img/about3.jpg") center center no-repeat;
   }
 }
 
