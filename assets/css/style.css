@@ -75,6 +75,8 @@ h6 {
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -611,9 +613,11 @@ section {
   min-height: 400px;
 }
 
-@media (max-width: 667px) {
+@media (max-width: 1024px) {
   .about .image img {
-    max-width: 100%;
+    background-image: url('../img/about.jpg') center center no-repeat;
+    background-size: cover;
+    min-height: 400px;
   }
 }
 
