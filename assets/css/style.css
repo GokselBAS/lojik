@@ -75,13 +75,6 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .image {
-    background-image: url('../img/about2.png') !important;
-    /* İstenilen stil ayarlamaları */
-  }
-}
-
 
 
 /*--------------------------------------------------------------
@@ -620,9 +613,9 @@ section {
   min-height: 400px;
 }
 
-@media (max-width: 667px) {
+@media (max-width: 1024px) {
   .about .image img {
-    max-width: 100%;
+    background-image: url('../img/about2.png');
   }
 }
 
