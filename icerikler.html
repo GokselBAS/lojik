@@ -40,6 +40,7 @@ function getParameterByName(name, url) {
 
 // ID parametresini al ve değişkene ata
 var id = getParameterByName('id');
+document.addEventListener("DOMContentLoaded", function() {
 
 if(id==1){
 var heading = document.getElementById("baslik");
@@ -73,6 +74,8 @@ heading.innerHTML = "Data Network Sistemleri";
     var heading = document.getElementById("baslik");
 heading.innerHTML = "Lütfen Menüden Hizmet Kategorisi Seçiniz.";
     }
+  
+});
 </script>
 
 </head>
