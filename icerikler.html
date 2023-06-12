@@ -27,56 +27,36 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <script>// URL'den parametreleri alacak yardımcı işlev
-function getParameterByName(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  // URL'den id parametresini alın
+  var urlParams = new URLSearchParams(window.location.search);
+  var id = urlParams.get('id');
 
-// ID parametresini al ve değişkene ata
-var id = getParameterByName('id');
+  // Sonucu belirleyin
+  var sonuc;
+  if (id === "1") {
+    sonuc = "Görüntü Sistemleri";
+  } else if (id === "2") {
+    sonuc = "Güvenlik Kamera Sistemleri";
+  } else if (id === "3") {
+    sonuc = "Işık Sistemleri";
+  } else if (id === "4") {
+    sonuc = "Ses Sistemleri";
+  } else if (id === "5") {
+    sonuc = "Yangın Algılama Sistemleri";
+  } else if (id === "6") {
+    sonuc = "Hırsız Alarm Sistemleri";
+  }  else if (id === "7") {
+    sonuc = "Data Network Sistemleri";
+  } else {
+    sonuc = "Geçersiz ID - Menüden Hizmet Kategorisi Seçiniz.";
+  }
 
-    window.onload = function() {
-
-if(id==1){
-var heading = document.getElementById("baslik");
-heading.innerHTML = "Görüntü Sistemleri";
-}
-    if(id==2){
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Güvenlik Kamera Sistemleri";
-    }
-     if(id==3){
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Işık Sistemleri";
-    }
-     if(id==4){
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Ses Sistemleri";
-    }
-     if(id==5){
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Yangın Algılama Sistemleri";
-    }
-     if(id==6){
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Hırsız Alarm Sistemleri";
-    }
-     if(id==7){
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Data Network Sistemleri";
-    }
-    else{
-    var heading = document.getElementById("baslik");
-heading.innerHTML = "Lütfen Menüden Hizmet Kategorisi Seçiniz.";
-    }
-  
-}
+  // Sonucu h2 etiketine yazdırın
+  var h2 = document.getElementById("baslik");
+  h2.innerHTML = sonuc;
+});
 </script>
 
 </head>
