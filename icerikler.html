@@ -40,7 +40,8 @@ function getParameterByName(name, url) {
 
 // ID parametresini al ve değişkene ata
 var id = getParameterByName('id');
-document.addEventListener("DOMContentLoaded", function() {
+
+    window.onload = function() {
 
 if(id==1){
 var heading = document.getElementById("baslik");
