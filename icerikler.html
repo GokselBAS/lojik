@@ -27,6 +27,23 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <script>// URL'den parametreleri alacak yardımcı işlev
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+// ID parametresini al ve değişkene ata
+var id = getParameterByName('id');
+
+// Değişkeni kullanma
+console.log(id);
+</script>
 
 </head>
 
