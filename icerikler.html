@@ -41,8 +41,38 @@ function getParameterByName(name, url) {
 // ID parametresini al ve değişkene ata
 var id = getParameterByName('id');
 
-// Değişkeni kullanma
-console.log(id);
+if(id==1){
+var heading = document.getElementById("baslik");
+heading.innerHTML = "Görüntü Sistemleri";
+}
+    else if(id==2){
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Güvenlik Kamera Sistemleri";
+    }
+     else if(id==3){
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Işık Sistemleri";
+    }
+     else if(id==4){
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Ses Sistemleri";
+    }
+     else if(id==5){
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Yangın Algılama Sistemleri";
+    }
+     else if(id==6){
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Hırsız Alarm Sistemleri";
+    }
+     else if(id==7){
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Data Network Sistemleri";
+    }
+    else{
+    var heading = document.getElementById("baslik");
+heading.innerHTML = "Lütfen Menüden Hizmet Kategorisi Seçiniz.";
+    }
 </script>
 
 </head>
@@ -90,7 +120,7 @@ console.log(id);
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>İçerik Başlık</h2>
+          <h2 >İçerik Başlık</h2>
           <ol>
             <li><a href="index.html">Anasayfa</a></li>
             <li><a href="portfolio.html">Görüntü Sistemleri</a></li>
@@ -105,7 +135,7 @@ console.log(id);
       <div class="container">
 
         <div class="section-title">
-          <h2 data-aos="fade-in">Görüntü Sistemleri</h2>
+          <h2 data-aos="fade-in" id="baslik">Test</h2>
           <p data-aos="fade-in">Lojik Teknoloji olarak, kalite, güvenilirlik ve müşteri odaklı yaklaşımı ön planda tutuyoruz. Sektördeki deneyimimiz ve uzman ekibimizle, ses ve güvenlik sistemlerinde öncü bir marka olmaktan gurur duyuyoruz.</p>
         </div>
 
